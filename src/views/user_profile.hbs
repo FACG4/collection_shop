@@ -1,8 +1,24 @@
+
 <img src="" alt="userPic">
-<h2>{{this.fullName}}</h2>
+<h2>{{user.fullname}}</h2>
 <a id="userInfo" href="#">user info</a>
 <div class="disable">
-<label for="firstName">{{this.firstName}}</label>
-<label for="lastName">{{this.lastName}}</label>
-<label for="email">{{this.email}}</label>
+<label for="firstName">{{user.firstname}}</label>
+<label for="lastName">{{user.lastname}}</label>
+<label for="email">{{user.email}}</label>
 </div>
+
+<ul>
+
+{{#each userGoods}}
+<li class="fruit__item">
+  <div class="fruit__image" style="background-image: url({{this.imgUrls}})"></div>
+  <div class="fruit__info">
+    <h2 class="fruit__name">{{this.goodsName}}</h2>
+    <h2 class="fruit__name">{{this.price}}</h2>
+    <p class="fruit__name">{{this.description}}</p>
+  </div>
+</li>
+{{/each}}
+
+</ul>

@@ -18,6 +18,7 @@ CREATE TABLE users (
   email VARCHAR(50) NOT NULL UNIQUE,
   hashpassword VARCHAR(50) NOT NULL
 );
+
 CREATE TABLE userGoods (
   userId INTEGER REFERENCES users(id),
   goodsId INTEGER REFERENCES goods(id)
@@ -60,7 +61,7 @@ INSERT INTO userGoods (userId , goodsId) VALUES
 (2 , 2),
 (2 , 3),
 (2 , 4),
-(2 , 1),
+(3 , 1),
 (3 , 2),
 (3 , 3),
 (3 , 4),
