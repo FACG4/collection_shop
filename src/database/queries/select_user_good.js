@@ -1,8 +1,8 @@
 const dbConnections = require("./../db_connection");
 
-const selctUser = (user_id, cb) => {
+const selctUserGood = (user_id, cb) => {
   let sql = {
-    text: "SELECT * FROM users WHERE id =  $1 ;",
+    text: 'select * from goods inner join userGoods on goods.id = userGoods.goodsId where userGoods.userId = $1 ;',
     values: [user_id]
   };
   dbConnections.query(
@@ -16,4 +16,4 @@ const selctUser = (user_id, cb) => {
   );
 };
 
-module.exports = selctUser ;
+module.exports = selctUserGood;
