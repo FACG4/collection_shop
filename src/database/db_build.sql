@@ -1,20 +1,20 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, goods , userGoods;
+DROP TABLE IF EXISTS users, goods , userGoods CASCADE ;
 
 CREATE TABLE goods (
   id serial PRIMARY KEY,
-  goodsName VARCHAR(50) NOT NULL UNIQUE,
+  goodsName VARCHAR(50) NOT NULL,
   imgUrl  TEXT NOT NULL,
- price INTEGER(50) NOT NULL,
-description VARCHAR(50) NOT NULL
+  price INTEGER NOT NULL,
+  description VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE users (
-  id serial PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   fullName  VARCHAR(50) NOT NULL,
- firstName  VARCHAR(50) NOT NULL,
- lastName  VARCHAR(50) NOT NULL,
+  firstName  VARCHAR(50) NOT NULL,
+  lastName  VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL UNIQUE,
   hashpassword VARCHAR(50) NOT NULL
 );
@@ -25,19 +25,25 @@ CREATE TABLE userGoods (
 
 
 
-INSERT INTO goods(goodsName, price, description) VALUES
-('Tshirt', 50, 'have many colers and very smart'),
-('hat',20,'aproperat for sun and very simple'),
-('LapTop', 800 , 'have many colers '),
-('Tshirt', 50,'have many colers and very smart'),
-('hat',20,'aproperat for sun and very simple'),
-('LapTop', 800 , 'have many colers '),
-('Tshirt', 50, 'have many colers and very smart'),
-('hat',20,'aproperat for sun and very simple'),
-('LapTop', 800 , 'have many colers '),
-('Tshirt', 50, 'have many colers and very smart'),
-('hat',20,'aproperat for sun and very simple'),
-('LapTop', 800 , 'have many colers ')
+INSERT INTO goods(goodsName, imgUrl,price, description) VALUES
+('Tshirt', 'https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',50, 'have many colers and very smart'),
+('hat','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',20,'aproperat for sun and very simple'),
+('LapTop','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 800 , 'have many colers '),
+('Tshirt','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 50,'have many colers and very smart'),
+('Tshirt', 'https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',50, 'have many colers and very smart'),
+('hat','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',20,'aproperat for sun and very simple'),
+('LapTop','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 800 , 'have many colers '),
+('Tshirt','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 50,'have many colers and very smart'),
+('Tshirt', 'https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',50, 'have many colers and very smart'),
+('hat','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',20,'aproperat for sun and very simple'),
+('LapTop','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 800 , 'have many colers '),
+('Tshirt','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 50,'have many colers and very smart'),
+('Tshirt', 'https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',50, 'have many colers and very smart'),
+('hat','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',20,'aproperat for sun and very simple'),
+('LapTop','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 800 , 'have many colers '),
+('Tshirt','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 50,'have many colers and very smart');
+
+
 
 INSERT INTO users ( fullName, firstName,  lastName, email, hashpassword) VALUES
 ('razan mohamed abu tawaheena','razan','tawaheena','rozamohamed9548@gmail.com','144545'),
@@ -62,7 +68,5 @@ INSERT INTO userGoods (userId , goodsId) VALUES
 (4 , 2),
 (4 , 3),
 (4 , 4);
-
-
 
 COMMIT;
