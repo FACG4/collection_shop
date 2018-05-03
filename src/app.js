@@ -11,7 +11,6 @@ const helpers = require('./views/helpers/index');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(bodyParser.raw({ type: () => true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 // set up view engine
 app.set('views', path.join(__dirname, 'views'));
