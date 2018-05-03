@@ -304,3 +304,41 @@ footer {
 .error__image {
   color: gray;
 }
+
+
+
+
+ 
+.isa_success {
+  font-size: 30px;
+  text-align: center;
+  margin: 10px 0px;
+  padding:12px;
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+
+.isa_success i {
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
+} 
+
+.isa_success, .isa_error {
+  margin: 10px 0px;
+  padding:12px;
+   
+  }
+
+
+  .isa_error {
+      color: #D8000C;
+      background-color: #FFD2D2;
+      text-align: center
+  }
+  
+  .isa_success i,  .isa_error i {
+      margin:10px 22px;
+      font-size:2em;
+      vertical-align:middle;
+  }
