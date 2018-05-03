@@ -10,7 +10,9 @@ const controllers = require('./controllers/index');
 const helpers = require('./views/helpers/index');
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
+app.use(bodyParser.raw({ type: () => true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 // set up view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
