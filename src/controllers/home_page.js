@@ -8,7 +8,8 @@ exports.get = (req, res) => {
       res.render('home_page', {
           goods: result,
           name: 'userName',
-          profile: 'profile'
+          profile: 'profile',
+          script: '/home_dom.js'
         }
       });
   })

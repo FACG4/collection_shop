@@ -1,6 +1,6 @@
   const insertuster=require('../database/queries/insert_user')
   exports.get = (req, res) => {
-    res.render('signup');
+    res.render('signup', {script:'/signup_dom.js'});
   };
 
 
