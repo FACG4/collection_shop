@@ -5,9 +5,6 @@ const db_connection = require('../db_connection');
 
 const   insertProducts= (goodsName,imgUrl, price, description, cb) => {
 
-
-  console.log(goodsName,imgUrl, price, description ,'dfgbjjjjjjjjjjjhnjkml');
-  
   let sql = {
     text: 'INSERT INTO goods (goodsName,imgUrl, price, description) VALUES ($1, $2, $3 ,$4)',
     values: [goodsName,imgUrl, price, description]
@@ -26,6 +23,3 @@ const   insertProducts= (goodsName,imgUrl, price, description, cb) => {
 module.exports = {
   insertProducts
 };
-
-
-
