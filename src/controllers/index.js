@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+const verify=require('./verify');
 
 const home = require('./home_page');
 const signup = require('./signup');
@@ -13,9 +14,12 @@ const user_page = require('./user_page');
 const error = require('./error');
 
 
-router.get('/', home.get);
+// router.get('/', home.get);
 router.get('/signup',signup.get);
 router.post('/signup',signup.post);
+
+router.get('/',verify,home.get);
+
 router.get('/user_page', user_page.get);
 
 router.post('/selectGood', home.post);
