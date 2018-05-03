@@ -16,8 +16,9 @@ CREATE TABLE users (
   firstName  VARCHAR(50) NOT NULL,
   lastName  VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL UNIQUE,
-  hashpassword VARCHAR(50) NOT NULL
+  hashpassword VARCHAR(250) NOT NULL
 );
+
 CREATE TABLE userGoods (
   userId INTEGER REFERENCES users(id),
   goodsId INTEGER REFERENCES goods(id)
@@ -26,22 +27,18 @@ CREATE TABLE userGoods (
 
 
 INSERT INTO goods(goodsName, imgUrl,price, description) VALUES
-('Tshirt', 'https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',50, 'have many colers and very smart'),
-('hat','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',20,'aproperat for sun and very simple'),
-('LapTop','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 800 , 'have many colers '),
-('Tshirt','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 50,'have many colers and very smart'),
-('Tshirt', 'https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',50, 'have many colers and very smart'),
-('hat','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',20,'aproperat for sun and very simple'),
-('LapTop','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 800 , 'have many colers '),
-('Tshirt','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 50,'have many colers and very smart'),
-('Tshirt', 'https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',50, 'have many colers and very smart'),
-('hat','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',20,'aproperat for sun and very simple'),
-('LapTop','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 800 , 'have many colers '),
-('Tshirt','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 50,'have many colers and very smart'),
-('Tshirt', 'https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',50, 'have many colers and very smart'),
-('hat','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808',20,'aproperat for sun and very simple'),
-('LapTop','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 800 , 'have many colers '),
-('Tshirt','https://www3.lenovo.com/ca/en/laptops/ideapad/lenovo-legion-y-series-laptops/Legion-Y520/p/88GMY500808', 50,'have many colers and very smart');
+('Tshirt', 'https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png',50, 'have many colers and very smart'),
+('hat','https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png',20,'aproperat for sun and very simple'),
+('LapTop','https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png', 800 , 'have many colers '),
+('Tshirt','https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png', 50,'have many colers and very smart'),
+('Tshirt', 'https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png',50, 'have many colers and very smart'),
+('hat','https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png',20,'aproperat for sun and very simple'),
+('LapTop','https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png', 800 , 'have many colers '),
+('Tshirt','https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png', 50,'have many colers and very smart'),
+('Tshirt', 'https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png',50, 'have many colers and very smart'),
+('hat','https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png',20,'aproperat for sun and very simple'),
+('LapTop','https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png', 800 , 'have many colers '),
+('Tshirt','https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05491132.png', 50,'have many colers and very smart');
 
 
 
@@ -60,7 +57,7 @@ INSERT INTO userGoods (userId , goodsId) VALUES
 (2 , 2),
 (2 , 3),
 (2 , 4),
-(2 , 1),
+(3 , 1),
 (3 , 2),
 (3 , 3),
 (3 , 4),

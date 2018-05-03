@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 // import 'express-handlebars'
+const bodyParser=require('body-parser');
 const exphbs = require('express-handlebars');
 
 const controllers = require('./controllers/index');
@@ -9,7 +10,7 @@ const controllers = require('./controllers/index');
 const helpers = require('./views/helpers/index');
 
 const app = express();
-
+app.use(bodyParser.urlencoded({ extended: false }))
 // set up view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

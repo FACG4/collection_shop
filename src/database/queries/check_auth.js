@@ -1,4 +1,4 @@
-const dbConnections = require("./../database/db_connection");
+const dbConnections = require("./../db_connection");
 
 function validateUser (req, callback) {
   dbConnections.query({
