@@ -2,7 +2,7 @@ var username = document.getElementById('username');
 var password = document.getElementById('password');
 var validName = document.getElementById('validName');
 var validPass = document.getElementById('validPass');
-
+///
 username.addEventListener('focusout', function () {
   if (username.value === '') {
     username.style.border = '1px solid red';

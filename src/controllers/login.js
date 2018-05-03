@@ -1,15 +1,17 @@
 // const {validateUser} = require('../database/queries/index');
 
+// function get (req, res) {
+//   res.render('login', {title: 'Admin Page', cssPath: '/css/login.css'});
+// }
 exports.get = (req, res) => {
-  res.render('login', {title: 'Admin Page', cssPath: '/css/login.css'});
-
-}
-
+    res.render('login', {title: 'Admin Page', cssPath: '/css/style.css'});
+  };
+  //
 // function post (req, res, next) {
 //   const data = {
 //     body: req.body
 //   };
-//   validateUser(data, (err, user) => {
+//   validateUser(data, (err, admin) => {
 //     if (err) {
 //       next(err);
 //     } else {
@@ -17,12 +19,13 @@ exports.get = (req, res) => {
 //     }
 //   });
 // }
-// /;
-
+//
 // function logout (req, res) {
 //   res.redirect('/');
 // }
-
+//
 // module.exports = {
+//   get,
+//   post,
 //   logout
 // };
