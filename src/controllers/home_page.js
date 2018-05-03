@@ -7,6 +7,6 @@ exports.get = (req, res) => {
     stringigoodObj = JSON.stringify(result)
     good = JSON.parse(stringigoodObj);
 
-    res.render('home_page' , {good});
+    res.render('home_page' , {good , name:'userName' , profile:'profile'});
   });
 };

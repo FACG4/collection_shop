@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 
-const home = require('./home');
+const home = require('./home_page');
 const user_page = require('./user_page');
 const error = require('./error');
 

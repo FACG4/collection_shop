@@ -13,7 +13,8 @@ exports.get = (req, res) => {
       fullname: userGood[0].fullname,
       firstname: userGood[0].firstname,
       lastname: userGood[0].lastname,
-      email: userGood[0].email
+      email: userGood[0].email,
+      script: '/user_dom.js'
     });
   });
 
