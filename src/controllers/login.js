@@ -49,17 +49,10 @@ console.log(resBoolean,'raaaaaaaaaaaaaaaaamyyyyyyyyyyy');
         
            res.redirect('/')
 
-           
     }
 
   })
 
-
-
-        
-
-
-     res.render('login');
 
         
     })
