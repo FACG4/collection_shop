@@ -8,11 +8,13 @@ const admin = require('./admin');
 
 const user_page = require('./user_page');
 const error = require('./error');
+const login = require('./login')
 
 
+router.get('/login', login.get)
 router.get('/', home.get);
 router.get('/signup',signup.get);
-router.post('/login',signup.post);
+// router.post('/login',signup.post);
 router.get('/user_page', user_page.get);
 
 

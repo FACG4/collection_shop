@@ -1,8 +1,4 @@
 node_modules
 package-lock.json
 coverage
-<<<<<<< HEAD
 config.env
-=======
-config.env
->>>>>>> b1eac5373a9364b0b33975efda7b7e34d7651f4f
