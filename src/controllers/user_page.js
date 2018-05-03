@@ -1,15 +1,10 @@
 const selectUserProfile = require('../database/queries/select_user_profile');
-let userGood = [];
-let stringiUserObj = '';
 
 exports.get = (req, res) => {
   selectUserProfile(2, (err, result) => {
 
-    stringiUserObj = JSON.stringify(result)
-    userGood = JSON.parse(stringiUserObj);
-
     res.render('user_page', {
-      userGood,
+      userGood:result,
       fullname: userGood[0].fullname,
       firstname: userGood[0].firstname,
       lastname: userGood[0].lastname,
