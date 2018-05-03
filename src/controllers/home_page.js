@@ -1,12 +1,15 @@
-const allGoods = require('../database/queries/select_all_goods');
-let good = [];
-let stringigoodObj = '';
-
+const select_all_goods = require('../database/queries/select_all_goods');
 exports.get = (req, res) => {
-  allGoods((err, result) => {
-    stringigoodObj = JSON.stringify(result)
-    good = JSON.parse(stringigoodObj);
 
-    res.render('home_page' , {good , name:'userName' , profile:'profile'});
-  });
+  select_all_goods((err, result) => {
+      if (err) return console.log(err);
+
+      console.log(result);
+      res.render('home_page', {
+          goods: result,
+          name: 'userName',
+          profile: 'profile'
+        }
+      });
+  })
 };
