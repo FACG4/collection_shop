@@ -1,18 +1,25 @@
-// module.exports = {
-//   fun : (req,res) =>{
-//
-//     const cookies = req.header.cookie? cookie.parse(req.headers.cookie) : {};
-//     if (cookies.token){
-//       verify(cookies.token,process.env.SECRET,(err,decoded)=>{
-//         if (err){
-//           res.writeHead(403, {'content-type': 'text/html'});
-//           res.end ('<h1>you are not authorized, fuck off</h1>');
-//           return false;
-//         }
-//         return true;
-//       });
-//
-//
-//     }else return true;
-//   };
-//   };
+const db_connection = require('../db_connection.js');
+const bcrypt = require('bcryptjs');
+
+const checkuser = (email, password, cb) => {
+
+    console.log(email);
+
+  const sql = {
+    text: `SELECT * FROM users WHERE email=$1`,
+    values: [email]
+  };
+
+  db_connection.query(sql, (err, result) => {
+    if (err) {
+      return cb(err);
+    } else {
+      cb(null, result.rows)
+
+    }
+  });
+}
+
+module.exports = {
+  checkuser
+};
