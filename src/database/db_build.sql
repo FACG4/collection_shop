@@ -20,8 +20,8 @@ CREATE TABLE users (
 );
 
 CREATE TABLE userGoods (
-  userId INTEGER REFERENCES users(id),
-  goodsId INTEGER REFERENCES goods(id)
+  userId INTEGER REFERENCES users(id) NOT NULL,
+  goodsId INTEGER REFERENCES  goods(id) NOT NULL
 );
 
 

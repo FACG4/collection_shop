@@ -15,6 +15,8 @@ router.get('/signup',signup.get);
 router.post('/login',signup.post);
 router.get('/user_page', user_page.get);
 
+router.post('/selectGood', home.post);
+
 
 router.post('/admin',admin.post);
 router.get('/admin', admin.get);
