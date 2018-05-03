@@ -304,75 +304,112 @@ footer {
 .error__image {
   color: gray;
 }
-/* /////////////////////login style//////////////////// */
 
-/*Add styling below*/
 
-* {
-  font-family: "Roboto", sans-serif;
+
+
+
+.isa_success {
+  font-size: 30px;
+  text-align: center;
+  margin: 10px 0px;
+  padding:12px;
+    color: #4F8A10;
+    background-color: #DFF2BF;
 }
 
-body {
-  margin: 0;
+.isa_success i {
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
 }
 
-section {
-  width: 100%;
-}
+.isa_success, .isa_error {
+  margin: 10px 0px;
+  padding:12px;
 
-.nav-wrapper {
-  background-color: #ee6e73;
-  height: 50px;
-  box-shadow: 0px 4px 5px lightgrey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  }
 
-.brand-logo {
-  text-decoration: none;
-  color: white;
-  font-size: 1.4rem;
-}
 
-input {
-  border: none;
-  padding: 2%;
-  border-bottom: 1px solid lightgrey;
-  margin-top: 2%;
-  font-size: 0.8rem;
-}
+  .isa_error {
+      color: #D8000C;
+      background-color: #FFD2D2;
+      text-align: center
+  }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 7%;
-}
+  .isa_success i,  .isa_error i {
+      margin:10px 22px;
+      font-size:2em;
+      vertical-align:middle;
+  }
 
-button {
-  width: 13%;
-  height: 33px;
-  margin-top: 4%;
-  background-color: #ee6e73;
-  border: none;
-  color: white;
-  font-size: 0.8rem;
-  align-self: center;
-}
+  /* /////////////////////login style//////////////////// */
 
-h1 {
-  display: flex;
-  justify-content: center;
-  margin-top: 70px;
-  font-weight: 100;
-  font-size: 40px;
-}
+  /*Add styling below*/
 
-p {
-  display: flex;
-  justify-content: center;
-}
+  * {
+    font-family: "Roboto", sans-serif;
+  }
 
-////
+  body {
+    margin: 0;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .nav-wrapper {
+    background-color: #ee6e73;
+    height: 50px;
+    box-shadow: 0px 4px 5px lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand-logo {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+  }
+
+  input {
+    border: none;
+    padding: 2%;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 2%;
+    font-size: 0.8rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 7%;
+  }
+
+  button {
+    width: 13%;
+    height: 33px;
+    margin-top: 4%;
+    background-color: #ee6e73;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    align-self: center;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    font-weight: 100;
+    font-size: 40px;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+  }

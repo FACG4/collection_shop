@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-exports.get = (req, res) => {
-    res.render('home_page', { activePage: { home: true } });
-  };
-=======
 onst select_all_goods = require('../database/queries/select_all_goods');
 exports.get = (req, res) => {
 
@@ -15,4 +10,3 @@ res.render('home_page', {
 });
 })
 };
->>>>>>> b1eac5373a9364b0b33975efda7b7e34d7651f4f
