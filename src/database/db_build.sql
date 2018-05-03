@@ -16,7 +16,7 @@ CREATE TABLE users (
   firstName  VARCHAR(50) NOT NULL,
   lastName  VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL UNIQUE,
-  hashpassword VARCHAR(50) NOT NULL
+  hashpassword VARCHAR(250) NOT NULL
 );
 
 CREATE TABLE userGoods (
