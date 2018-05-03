@@ -9,11 +9,11 @@
     const {fullname,fname ,lname,email, password} = req.body;
     insertuster.insertUsers(fullname,fname ,lname,email, password,(err,result)=>{
         if (err) return console.log(err);
-    res.render('home_page');
+     res.render('login');
+
         
     })
 
     
-    // console.log(req.body,'req');
     
   };
