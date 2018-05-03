@@ -29,8 +29,8 @@ router.get('/login', login.get);
 router.post('/login' , login.post);
 
 
-// router.use(error.client);
-// // router.use(error.server);
+router.use(error.client);
+router.use(error.server);
 
 
 

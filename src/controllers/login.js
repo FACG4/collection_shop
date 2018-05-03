@@ -44,9 +44,8 @@ console.log(resBoolean,'raaaaaaaaaaaaaaaaamyyyyyyyyyyy');
           console.log('userdata',userData);
           console.log(process.env.JWT_KEY);
           
-           const token = jwt.sign(userData, process.env.JWT_KEY)
+           const token = jwt.sign(userData, process.env.JWT_KEY);
            console.log('token',token);
-        
            res.redirect('/')
 
     }
