@@ -20,6 +20,7 @@ body {
 
 ul {
   list-style-type: none;
+  column-rule-color: brown;
 }
 
 a {
@@ -28,6 +29,7 @@ a {
 
 h1, h2, h3, h4 {
   line-height: 1;
+  color: #e0245e;
 }
 
 img, video {
@@ -63,7 +65,10 @@ body {
 
 .navbar {
   padding: 1rem 0;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px;
+  column-rule-color: rgb(55, 13, 125);
+  /*
+  rgba(0, 0, 0, 0.2); */
 }
 
 .navbar__container {
@@ -79,16 +84,20 @@ body {
 }
 
 .navbar__link {
-  color: var(--color-text-main);
+  color: rgb(113, 5, 70);
   text-transform: uppercase;
+  text-size: 3px;
 }
 
 .navbar__link:hover {
   border-bottom: solid 3px var(--color-text-main);
+  border-color: rgb(143, 6, 92)
 }
 
 .navbar__link--active {
-  border-bottom: solid 3px var(--color-text-main);
+  border-bottom: solid 3px;
+  /* var(--color-text-main); */
+  color-text-main: rgb(143, 6, 92);
 }
 
 /***********************************************
@@ -171,6 +180,7 @@ body {
   color: white;
   font-size: 0.9rem;
   border-radius: 2px;
+  border-color: red;
 }
 
 @media (min-width: 40rem) {
@@ -230,6 +240,7 @@ body {
 
 .good__des {
   font-size: 1rem;
+  color:  #539c04;
 }
 
 .fruit__fav-btn {
@@ -305,40 +316,34 @@ footer {
   color: gray;
 }
 
-
-
-
- 
 .isa_success {
   font-size: 30px;
   text-align: center;
   margin: 10px 0px;
-  padding:12px;
-    color: #4F8A10;
-    background-color: #DFF2BF;
+  padding: 12px;
+  color: #4F8A10;
+  background-color: #DFF2BF;
 }
 
 .isa_success i {
-    margin:10px 22px;
-    font-size:2em;
-    vertical-align:middle;
-} 
+  margin: 10px 22px;
+  font-size: 2em;
+  vertical-align: middle;
+}
 
 .isa_success, .isa_error {
   margin: 10px 0px;
-  padding:12px;
-   
-  }
+  padding: 12px;
+}
 
+.isa_error {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  text-align: center
+}
 
-  .isa_error {
-      color: #D8000C;
-      background-color: #FFD2D2;
-      text-align: center
-  }
-  
-  .isa_success i,  .isa_error i {
-      margin:10px 22px;
-      font-size:2em;
-      vertical-align:middle;
-  }
+.isa_success i, .isa_error i {
+  margin: 10px 22px;
+  font-size: 2em;
+  vertical-align: middle;
+}
