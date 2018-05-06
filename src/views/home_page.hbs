@@ -1,14 +1,14 @@
-<section class="main__container--full-width">
-  <ul class="good__list" id="js-fruit-list">
+<section class='main__container--full-width'>
+  <ul class='good__list'>
 
     {{#each goods}}
-      <li class="good__item">
-        <img class="good__image" src="{{this.imgurl}}" alt="goodimg" />
-        <div class="good__info">
-          <h2 class="good__name">{{this.goodsname}}</h2>
-          <h2 class="good__name">{{this.price}}$</h2>
-          <p class="good__des">{{this.description}}</p>
-          <button id={{this.id}} type="submit" value={{this.id}}>Select</button>
+      <li class='good__item'>
+        <img class='good__image' src='{{this.imgurl}}' alt='goodimg' />
+        <div class='good__info'>
+          <h2 class='good__name'>{{this.goodsname}}</h2>
+          <h2 class='good__name'>{{this.price}}$</h2>
+          <p class='good__des'>{{this.description}}</p>
+          <button type='submit' value= {{this.id}}>Select</button>
         </div>
       </li>
     {{/each}}

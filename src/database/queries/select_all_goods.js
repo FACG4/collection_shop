@@ -1,7 +1,7 @@
-const dbConnections = require("./../db_connection");
+const dbConnections = require('../db_connection');
 
 const allGoods = cb => {
-  let sql = " SELECT * FROM goods ; ";
+  let sql = `SELECT * FROM goods ;`;
   dbConnections.query(
     sql,
     (err, res) => {
