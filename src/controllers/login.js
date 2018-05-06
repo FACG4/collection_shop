@@ -18,10 +18,7 @@ exports.post = (req, res) => {
     if (!result.length) {
       res.send('invalid email');
     } else {
-      console.log(result[0].hashpassword);
-      console.log(req.body.password);
       bcrypt.compare(req.body.password, result[0].hashpassword, (errr, response) => {
-        console.log(response);
         if (err) throw new Error(errr, 'compare');
         if (!response) {
           res.send('invalid password');
