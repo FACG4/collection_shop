@@ -1,0 +1,24 @@
+<h2>{{fullname}}</h2>
+<a id='userInfo'>user info</a>
+<div id='disabledDiv' class='disable'>
+  <label for='firstName'>{{firstname}}</label>
+  <label for='lastName'>{{lastname}}</label>
+  <label for='email'>{{email}}</label>
+</div>
+
+<section class='main__container--full-width'>
+  <ul class='good__list'>
+
+    {{#each userGood}}
+      <li class='good__item'>
+        <img class='good__image' src='{{this.imgurl}}' alt='goodimg' />
+        <div class='good__info'>
+          <h2 class='good__name'>{{this.goodsname}}</h2>
+          <h2 class='good__name'>{{this.price}}$</h2>
+          <p class='good__des'>{{this.description}}</p>
+        </div>
+      </li>
+    {{/each}}
+
+  </ul>
+</section>

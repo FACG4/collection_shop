@@ -1,0 +1,23 @@
+<form id='login' method='post' action='/login'>
+  <div class='container'>
+    <div class='title'>
+      <h1>Online Shop</h1>
+    </div>
+    <hr>
+    <label for='email'>
+        <b>Email</b>
+        <input id='email' type='email' placeholder='Enter Email' name='email' required>
+    </label>
+    <p id='emailError'></p>
+    <label for='psw'><b>Password</b>
+    <input  id='password' type='password' placeholder='Enter Password' name='password' required></label>
+    <p id='passworderror'></p>
+    {{#if err}}
+    <h4>err</h4>
+    {{/if}}
+    <div class='clearfix'>
+      <button type='submit' class='signupbtn'>Log in</button>
+    </div>
+    <a href='/signup'>Register now</a>
+  </div>
+</form>
