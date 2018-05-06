@@ -1,16 +1,14 @@
-
 const db_connection = require('../db_connection');
 
-
-
-const   insertProducts= (goodsName,imgUrl, price, description, cb) => {
+const insertProducts = (goodsName, imgUrl, price, description, cb) => {
 
   let sql = {
-    text: 'INSERT INTO goods (goodsName,imgUrl, price, description) VALUES ($1, $2, $3 ,$4)',
-    values: [goodsName,imgUrl, price, description]
+    text: `INSERT INTO goods (goodsName,imgUrl, price, description) VALUES ($1, $2, $3 ,$4)`,
+    values: [goodsName, imgUrl, price, description]
   };
-  db_connection.query(sql, (err, res) => {
 
+  db_connection.query(sql, (err, res) => {
+    
     if (err) {
       return cb(err);
     } else {

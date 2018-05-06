@@ -1,11 +1,12 @@
 const db_connection = require('../db_connection');
 
-const insertGoodsToUser = (goodId,userId , cb) => {
+const insertGoodsToUser = (goodId, userId, cb) => {
 
   let sql = {
-    text: 'INSERT INTO userGoods (userId,goodsId) VALUES ($1, $2)',
-    values: [userId , goodId]
+    text: `INSERT INTO userGoods (userId,goodsId) VALUES ($1, $2)`,
+    values: [userId, goodId]
   };
+
   db_connection.query(sql, (err, res) => {
 
     if (err) {
@@ -17,4 +18,4 @@ const insertGoodsToUser = (goodId,userId , cb) => {
 
 };
 
-module.exports = insertGoodsToUser ;
+module.exports = insertGoodsToUser;

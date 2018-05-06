@@ -1,16 +1,30 @@
 const selectUserProfile = require('../database/queries/select_user_profile');
 
-exports.get = (req, res) => {
-  selectUserProfile(2, (err, result) => {
+const jwt = require('jsonwebtoken');
+const {
+  parse
+} = require('cookie');
 
-    res.render('user_page', {
-      userGood:result,
-      fullname: userGood[0].fullname,
-      firstname: userGood[0].firstname,
-      lastname: userGood[0].lastname,
-      email: userGood[0].email,
-      script: '/user_dom.js'
-    });
+exports.get = (req, res) => {
+  const {
+    accessToken
+  } = parse(req.headers.cookie);
+  jwt.verify(accessToken, process.env.JWT_KEY, (err, decoded) => {
+    if (err) return console.log(err);
+
+    else {
+      selectUserProfile(decoded.userId, (err, result) => {
+        if(err) return res.status(500); 
+        res.render('user_page', {
+          userGood: result,
+          fullname: result[0].fullname,
+          firstname: result[0].firstname,
+          lastname: result[0].lastname,
+          email: result[0].email,
+          script: '/user_dom.js'
+        });
+      });
+    }
   });
 
 };

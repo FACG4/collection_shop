@@ -1,27 +1,39 @@
 const select_all_goods = require('../database/queries/select_all_goods');
 const insert_select_good = require('../database/queries/insert_select_good');
-
+const jwt = require('jsonwebtoken');
+const {
+  parse
+} = require('cookie');
 exports.get = (req, res) => {
 
   select_all_goods((err, result) => {
-    if (err) return console.log(err);
+    if (err) return res.status(500);
 
     res.render('home_page', {
       goods: result,
       name: 'userName',
       profile: 'profile',
-      script: '/home_dom.js'
+      script: '/home_dom.js',
+      err:res.err
     });
   })
 };
 
 exports.post = (req, res) => {
-
-  insert_select_good(req.headers.id, 2, (err, result) => {
+  const {
+    accessToken
+  } = parse(req.headers.cookie);
+  jwt.verify(accessToken, process.env.JWT_KEY, (err, decoded) => {
     if (err) return console.log(err);
 
-    res.render('home_page', {
-      script: '/home_dom.js'
-    });
+    else {
+      insert_select_good(req.headers.id, decoded.userId, (err, result) => {
+        if (err) return res.status(500);
+
+        res.render('home_page', {
+          script: '/home_dom.js'
+        });
+      })
+    }
   })
 };
